@@ -157,7 +157,7 @@ If you want to understand the internals, read `modlist-generator.go` top-to-bott
 
 ## Contributing
 
-Contributions are welcome — open an issue or submit a PR. Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages and PR titles; the CI enforces this automatically.
+Contributions are welcome — open an issue or submit a PR. Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages and PR titles.
 
 To add new release targets, edit `build.sh` (the Go cross-compilation table).
 

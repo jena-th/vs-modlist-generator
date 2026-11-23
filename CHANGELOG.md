@@ -27,7 +27,7 @@ Initial release of the Vintage Story Mod List Generator.
 - Single-file Go binary that scans a directory for `.zip` archives, extracts `modinfo.json`, and prints a sorted mod manifest.
 - Markdown output mode (`--markdown`) producing a sortable table plus error-reporting block.
 - Cross-platform build matrix (Windows, Linux, macOS).
-- Conventional Commits enforcement via CI checks.
+
 
 ### Changed
 - Replaced the original JavaScript reference implementation with idiomatic Go for zero-runtime deployment.

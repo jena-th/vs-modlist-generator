@@ -78,11 +78,7 @@ bash build.sh
 
 Or run `bash release.sh vX.Y.Z` (requires `GITHUB_USER=jena-th` and `GITHUB_REPO=vs-modlist-generator` env vars).
 
-### CI/CD
 
-- **No GitHub Actions runners** — all builds are local.
-- Conventional Commits enforcement exists in `.github/workflows/conventional-commits.yml`.
-- Release workflow lives in `.github/workflows/release.yml`.
 
 ## Development conventions
 
