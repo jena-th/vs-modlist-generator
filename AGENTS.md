@@ -59,6 +59,10 @@ Options:
 
 The `helpMsg` constant lives at package level near the top of the file for code locality alongside usage comments.
 
+## Why no CI/CD
+
+GitHub killed the free tier for Actions runners. The "platform" that used to give hobbyists 2,000 minutes a month now demands $$ or nothing — and even then you're on their dime. That's why all builds here are **local only**. There is no workflow file, no runner config, and no dependency on GitHub-hosted CI infrastructure. If you want a build, run the script yourself.
+
 ## Build & Release Process
 
 ### Building locally

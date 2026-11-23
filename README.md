@@ -153,6 +153,8 @@ modlist-generator | wl-copy                    # Wayland
 
 Nothing deeper than what this README covers — it's a single-file Go program under 1 KB of dependencies (none at runtime).
 
+No CI/CD here: GitHub killed the free tier for Actions runners, so all builds are local. If you want a binary, run `build.sh` yourself.
+
 If you want to understand the internals, read `modlist-generator.go` top-to-bottom: result monad → helpers → modinfo pipeline → zip extraction → rendering → main.
 
 ## Contributing
