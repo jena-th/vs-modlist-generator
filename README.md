@@ -3,7 +3,7 @@
 Portable, zero-dependency mod list generator for [Vintage Story](https://vintagestory.at/) — reads all `.zip` archives in the current working directory and outputs a clean mod manifest.
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](LICENSE)
-[![Release Builds](https://github.com/jena-th/vs-modlist-generator/actions/workflows/release.yml/badge.svg)](https://github.com/jena-th/vs-modlist-generator/releases/latest)
+[![Latest Release](https://img.shields.io/github/v/release/jena-th/vs-modlist-generator?label=release&color=purple)](https://github.com/jena-th/vs-modlist-generator/releases/latest)
 [![Go Stable](https://img.shields.io/badge/Go-stable-green)](https://go.dev/dl/)
 
 ## Why
