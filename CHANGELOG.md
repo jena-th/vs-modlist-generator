@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [1.4.1] — 2026-11-23
 
+### Added
+- `AGENTS.md` with project memory and engineering rules.
+
 ### Changed
 - Moved `helpMsg` constant to package level, closer to docopt usage specification for improved code locality.
 
