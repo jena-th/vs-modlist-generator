@@ -4,7 +4,6 @@
 set -euo pipefail
 
 TAG="$1"
-ORIGIN="origin"
 
 echo "=== Building all platforms ==="
 bash build.sh
@@ -14,8 +13,8 @@ echo "=== Creating release $TAG ==="
 gh release create "$TAG" \
   --title "Release ${TAG#v}" \
   --generate-notes \
-  --target "${ORIGIN}/HEAD" \
-  builds/*
+
+  build/*
 
 echo ""
 echo "Done — tag: https://github.com/${GITHUB_USER:-jena-th}/${GITHUB_REPO:-vs-modlist-generator}/releases/tag/$TAG"

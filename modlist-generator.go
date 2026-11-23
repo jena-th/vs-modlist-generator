@@ -1,8 +1,3 @@
-// modlist-generator — portable, self-contained Vintage Story mod list generator.
-// Usage:
-//   cd Mods && go run modlist-generator.go
-//   cd Mods && go run modlist-generator.go --markdown
-
 package main
 
 import (
@@ -15,6 +10,23 @@ import (
 	"slices"
 	"strings"
 )
+
+// helpMsg — CLI usage string (docopt-style).  Lives as high as possible in the
+// file; Go requires imports to appear before other declarations.
+const helpMsg = `
+Usage:
+  modlist-generator [options]
+
+Options:
+  -m, --markdown       Output as a Markdown table with summary section.
+                       (default: plain text one-per-line)
+  -h, --help           Show this help message and exit.
+
+Notes:
+  Reads all .zip files in the current working directory. Each archive is
+  opened for its modinfo.json entry; if the file is missing or malformed
+  the mod lands in a "Failed Entries" block instead of being silently dropped.
+`
 
 // ---------------------------------------------------------------------------
 // Result monad — Go-friendly, no panics.  Errors are collected and reported.
@@ -275,21 +287,6 @@ func mdRender(results []modEntry, failed []*failedEntry) string {
 // ---------------------------------------------------------------------------
 
 func main() {
-	// Usage string — printed when the user passes -h or --help.
-	const helpMsg = `
-Usage:
-  modlist-generator [options]
-
-Options:
-  -m, --markdown       Output as a Markdown table with summary section.
-                       (default: plain text one-per-line)
-  -h, --help           Show this help message and exit.
-
-Notes:
-  Reads all .zip files in the current working directory. Each archive is
-  opened for its modinfo.json entry; if the file is missing or malformed
-  the mod lands in a "Failed Entries" block instead of being silently dropped.
-`
 	for _, arg := range os.Args[1:] {
 		if arg == "-h" || arg == "--help" {
 			fmt.Print(helpMsg)

@@ -1,3 +1,3 @@
-module github.com/jena-th/vs-modlist-generator v1.4.1
+module github.com/jena-th/vs-modlist-generator
 
 go 1.27.4

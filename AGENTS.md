@@ -9,14 +9,14 @@ Authoritative engineering rules and project memory for `vs-modlist-generator`.
 - **Language**: Go 1.27.4 (stdlib only, zero dependencies)
 - **Original implementation**: JavaScript (`modlist-generator.js`) — the initial source of truth for specification and behavior; the Go rewrite is idiomatic but functionally derived from it.
 - **Module path**: `github.com/jena-th/vs-modlist-generator`
-- **Repository**: https://github.com/jena-th/vs-modlist-generator
+- **Repository**: <https://github.com/jena-th/vs-modlist-generator>
 - **Latest release**: v1.4.1 (2026-11-23)
 
 ## Architecture
 
 ### File layout
 
-```
+```txt
 modlist-generator.go   — single-file Go application (current primary implementation)
 modlist-generator.js   — initial reference implementation; **source of truth** for original spec and behavior
 build.sh               — cross-platform build script (Win, Linux, macOS Intel/ARM)
@@ -49,7 +49,7 @@ go.mod                — Go module file, no external dependencies
 
 ### CLI interface (docopt-style)
 
-```
+```shell
 Usage:  modlist-generator [options]
 Options:
   -m, --markdown    Output as a Markdown table with summary section.
@@ -87,6 +87,11 @@ Or run `bash release.sh vX.Y.Z` (requires `GITHUB_USER=jena-th` and `GITHUB_REPO
 ## Development conventions
 
 - **Every change must be documented in `CHANGELOG.md`** — add an entry under the appropriate section (`Added`, `Changed`, `Fixed`, etc.) before committing. No undocumented changes, even trivial ones.
+- **Always use `tasks.md` to plan and estimate before implementing.** When asked to do something:
+  1. Break the request into discrete steps.
+  2. Log each step in `tasks.md` with a cost estimate.
+  3. Present the plan to the user for approval — don't jump straight into coding.
+  4. After approval, update tasks.md status as you work through each item.
 - Use conventional commits for all messages (`feat:`, `fix:`, `docs:`, `chore:`, etc.)
 - Track work in `tasks.md` — plan features, estimate cost, and log modifications there first.
 - Go formatting via `gofmt` / editor integration.

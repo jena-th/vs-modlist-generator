@@ -2,7 +2,8 @@
 set -euo pipefail
 
 SRC="modlist-generator.go"
-OUT="builds"
+OUT="build"
+rm -f "${OUT:?}"/*
 mkdir -p "$OUT"
 
 targets=(

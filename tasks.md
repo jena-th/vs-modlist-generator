@@ -44,3 +44,10 @@ Running log of planned work, cost estimates, and modifications for **vs-modlist-
 | 2026-11-23 | Added JS source-of-truth note to AGENTS.md | ~2 min | v1.4.1 |
 | 2026-11-23 | Added changelog discipline + task tracking conventions | ~5 min | — |
 | 2026-11-23 | Created `tasks.md` for planning and modification tracking | ~5 min | — |
+| 2026-11-23 | Moved `helpMsg` to highest valid Go position (after imports) | ~30 min (incl. syntax debugging) | — |
+| 2026-11-23 | Updated AGENTS.md: added planning & estimation discipline rule | ~5 min | — |
+
+## Lessons Learned
+
+- **Don't skip tasks.md** — every request should be planned, costed, and presented before implementation.
+- When moving code in Go, remember imports must appear before other declarations; the highest valid position for a `const` is immediately after the import block closes.
