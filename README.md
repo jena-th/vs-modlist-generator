@@ -81,6 +81,8 @@ Better Furnaces 3.1.0
 | `-m`, `--markdown` | Render as a Markdown table with summary section |
 | `-h`, `--help`     | Show help and exit |
 
+The command-line interface follows the [docopt](http://docopt.org/) philosophy: a human-readable usage block drives the entire parser, so every flag you see is declared in plain text near the top of the program. That means the help output is never out of sync with the source code — it *is* the documentation, embedded directly into `modlist-generator.go`.
+
 ## Platform-Specific Usage
 
 The generator writes the mod list to **standard output** — nothing is saved to disk automatically. Redirect it into a file or pipe it to your clipboard.
